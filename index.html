@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+		<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+		<title>Hello, World!</title>
+</head>
+<body>
+		<form>
+		 <input type="number" placeholder="enter any number" id="in_1">	
+		 <input type="number" placeholder="enter any number" id="in_2"><br>
+	 <input type="submit" id="btn" onclick=" return main()">
+		</form>
+		
+		<h1>Addition is..</h1>
+		<p id="adi"></p>
+		
+		<h1>Subtraction is..</h1>
+		<p id="subt"></p>
+		
+		<h1>Multiplication is..</h1>
+		<p id="mult"></p>
+		
+		<h1>Divison is..</h1>
+		<p id="divi"></p>
+		
+		<script>
+		function main(){
+				var a = Number(document.getElementById("in_1").value);
+					var b = Number(document.getElementById("in_2").value);
+				addition(a,b);
+				subt(a,b);
+				mult(a,b);
+				divide(a,b);
+
+				return false;
+		}
+		
+		function addition(x,y){
+			var z =	document.getElementById("adi").innerHTML=x+y;
+				return z;
+		}
+		
+		function subt(x,y){
+				var z = document.getElementById("subt").innerHTML=x-y;
+				return z;
+		}
+		
+		function mult(x,y){
+				var z = document.getElementById("mult").innerHTML=x*y;
+				return z;
+		}
+		
+		function divide(x,y){
+				var z = document.getElementById("divi").innerHTML=x/y;
+				return z;
+		}
+		</script>
+</body>
+</html>
